@@ -1594,7 +1594,8 @@ footer {
 
     .box-3 {
         top: 50%;
-        right: -25%;
+        right: -10%;
+        left: auto;
     }
 
     .skills-grid,
