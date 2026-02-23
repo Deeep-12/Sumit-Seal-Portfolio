@@ -316,6 +316,7 @@ nav {
 .typing-text {
     color: var(--accent-color);
     margin-left: 10px;
+    white-space: nowrap;
 }
 
 .cursor {
@@ -1148,7 +1149,7 @@ footer {
 .modal {
     display: none;
     position: fixed;
-    z-index: 1000;
+    z-index: 2000;
     left: 0;
     top: 0;
     width: 100%;
@@ -1561,8 +1562,19 @@ footer {
     }
 
     .hero-image-container {
-        width: 280px;
-        height: 280px;
+        width: 250px;
+        height: 250px;
+    }
+
+    .image-wrapper {
+        width: 250px;
+        height: 250px;
+    }
+
+    .role {
+        font-size: 1.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .floating-box {
@@ -1615,6 +1627,13 @@ footer {
     .modal-content {
         width: 95%;
         padding: 30px 20px;
+        max-height: 85vh;
+        overflow-y: auto;
+    }
+
+    .modal h2 {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
     }
 
     .report-option {
