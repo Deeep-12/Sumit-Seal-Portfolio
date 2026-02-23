@@ -1496,9 +1496,13 @@ footer {
 /* Mobile Devices (max-width: 768px) */
 @media screen and (max-width: 768px) {
     header {
-        width: calc(100% - 20px);
+        width: auto;
+        left: 10px;
+        right: 10px;
+        transform: none;
         top: 10px;
         padding: 0 15px;
+        max-width: none;
     }
 
     nav {
@@ -1523,19 +1527,19 @@ footer {
     .nav-links {
         position: fixed;
         left: -100%;
-        top: 70px;
+        top: 0;
+        height: 100vh;
         flex-direction: column;
         background: rgba(15, 23, 42, 0.98);
-        backdrop-filter: blur(15px);
+        backdrop-filter: blur(20px);
         width: 100%;
-        height: auto;
-        border-radius: 0 0 20px 20px;
+        border-radius: 0;
         text-align: center;
-        transition: 0.3s;
-        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.5);
-        padding: 40px 0;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        z-index: 999;
+        transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: none;
+        padding: 100px 0;
+        border: none;
+        z-index: 998;
     }
 
     .nav-links.active {
@@ -1628,11 +1632,12 @@ footer {
     }
 
     .modal-content {
-        width: 92%;
-        padding: 40px 15px 20px 15px;
-        max-height: 90vh;
+        width: 90%;
+        padding: 40px 20px 30px 20px;
+        max-height: 85vh;
         overflow-y: auto;
-        border-radius: 20px;
+        border-radius: 24px;
+        margin: 20px auto;
     }
 
     .modal h2 {
@@ -1641,16 +1646,18 @@ footer {
     }
 
     .report-option {
-        padding: 15px 20px;
-        font-size: 0.95rem;
-        gap: 15px;
+        padding: 14px 20px;
+        font-size: 0.9rem;
+        gap: 12px;
         width: 100%;
-        justify-content: center;
-        text-align: center;
+        justify-content: flex-start;
+        /* Better for text alignment */
+        text-align: left;
     }
 
     .logo {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+        white-space: nowrap;
     }
 }
 
