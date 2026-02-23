@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Laptop Screen -->
+  <rect x="8" y="12" width="48" height="32" rx="2" />
+  <!-- Laptop Base -->
+  <path d="M4,52 h56 l-4,-8 h-48 z" />
+  <!-- Megaphone coming out of screen -->
+  <path d="M32 28 L42 20 L42 36 L32 28 Z" fill="none" />
+  <path d="M42 22 L46 22 L46 34 L42 34" />
+  <path d="M28 28 h4" />
+  <path d="M48 24 l4 -4" />
+  <path d="M48 32 l4 4" />
+  <path d="M54 28 h2" />
+</svg>

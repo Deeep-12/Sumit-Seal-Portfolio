@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Automation - Project Details | Sumit Seal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .details-container {
+            max-width: 800px;
+            margin: 120px auto 60px;
+            padding: 0 20px;
+        }
+
+        .details-header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 20px;
+        }
+
+        .details-title {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #f8fafc;
+        }
+
+        .details-subtitle {
+            color: var(--accent-color);
+            font-weight: 500;
+        }
+
+        .section-block {
+            margin-bottom: 60px;
+        }
+
+        .section-heading {
+            font-size: 1.5rem;
+            color: #f8fafc;
+            margin-bottom: 25px;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        .text-content {
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+
+        .image-box {
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.3);
+            font-weight: 600;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            /* Changed to contain to fit full image */
+            transition: transform 0.3s ease;
+        }
+
+        .image-box:hover img {
+            transform: scale(1.02);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Sumit Seal</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Back to Portfolio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="details-container">
+        <a href="index.html" class="back-link">← Back to Projects</a>
+
+        <div class="details-header reveal">
+            <h1 class="details-title">Automated LinkedIn Content Generator</h1>
+            <p class="details-subtitle">AI Workflows Project</p>
+        </div>
+
+        <!-- 1. Workflow Design -->
+        <div class="section-block reveal">
+            <h2 class="section-heading">1. Workflow design</h2>
+
+            <div class="image-box">
+                <img src="images\Linkedin 1.png" alt="Workflow Design" class="clickable-img"
+                    onclick="openImageModal(this.src)">
+            </div>
+
+            <p class="text-content">
+                In the <b>“Get Rows in Sheet”</b> node, the topic is obtained by the system from the first row with the
+                status “To Do”
+                and forward to the next <b>“HTTP Request”</b> node, where the Web search is happening through tavily API
+                call,
+                with the help of the Gemini chat model and finally updating in the sheet, changing the status to
+                “created”
+            </p>
+        </div>
+
+        <!-- 2. Google Sheets Node -->
+        <div class="section-block reveal">
+            <h2 class="section-heading">2. Google sheets Node</h2>
+
+            <div class="image-box">
+                <img src="images\Linkedin 2.png" alt="Google Sheets Node" class="clickable-img"
+                    onclick="openImageModal(this.src)">
+            </div>
+
+            <p class="text-content">
+                This Node gets the Topic from the sheet and sends the output to the next HTTP request
+            </p>
+        </div>
+
+        <!-- 3. HTTP Request Node -->
+        <div class="section-block reveal">
+            <h2 class="section-heading">3. HTTP Request Node</h2>
+
+            <div class="image-box">
+                <img src="images\Linkedin 3.png" alt="HTTP Request Node" class="clickable-img"
+                    onclick="openImageModal(this.src)">
+            </div>
+
+            <p class="text-content">
+                In this Node, forwarding with the “Topic”, “Status” and “Content”, the Tavily make an AI-ready structure
+                that can be directly used in the
+                AI systems. The Output shows the Tavily results where the content field consists of a structured format
+                what to search through AI systems.
+                Further, in the <b>“AI agent”</b> node, the web search is done and content is obtained as per the
+                “prompt”
+
+            </p>
+        </div>
+
+        <!-- 4. Google sheet Result -->
+        <div class="section-block reveal">
+            <h2 class="section-heading">4. Google sheet Result</h2>
+
+            <div class="image-box">
+                <img src="images\Linkedin 4.png" alt="Google Sheet Result" class="clickable-img"
+                    onclick="openImageModal(this.src)">
+            </div>
+
+            <p class="text-content">
+                This image shows the Google Sheet overview. The topic should be provided, and the system will
+                automatically create “Ready-to-post” contents
+                and update them in the Content column. This workflow can be triggered at a scheduled time (like 7 AM).
+                In that case, the system will create content on a given topic at 7 AM every day.
+            </p>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Sumit Seal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Image Lightbox Modal -->
+    <div id="imageLightbox" class="image-lightbox">
+        <span class="lightbox-close" onclick="closeImageModal()">&times;</span>
+        <img class="lightbox-content" id="lightboxImg">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
