@@ -5,6 +5,25 @@ let charIndex = 0;
 let isDeleting = false;
 let typeSpeed = 100;
 
+// Mobile Menu Components
+const mobileMenu = document.getElementById('mobile-menu');
+const navLinksArr = document.querySelector('.nav-links');
+
+if (mobileMenu) {
+    mobileMenu.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+        navLinksArr.classList.toggle('active');
+    });
+
+    // Close menu when clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            navLinksArr.classList.remove('active');
+        });
+    });
+}
+
 function typeEffect() {
     const currentRole = roles[roleIndex];
 
