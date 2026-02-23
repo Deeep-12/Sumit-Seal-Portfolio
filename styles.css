@@ -1496,8 +1496,9 @@ footer {
 /* Mobile Devices (max-width: 768px) */
 @media screen and (max-width: 768px) {
     header {
-        width: 95%;
-        padding: 0 20px;
+        width: calc(100% - 20px);
+        top: 10px;
+        padding: 0 15px;
     }
 
     nav {
@@ -1522,16 +1523,17 @@ footer {
     .nav-links {
         position: fixed;
         left: -100%;
-        top: 80px;
+        top: 70px;
         flex-direction: column;
-        background: rgba(15, 23, 42, 0.95);
-        backdrop-filter: blur(10px);
+        background: rgba(15, 23, 42, 0.98);
+        backdrop-filter: blur(15px);
         width: 100%;
-        border-radius: 20px;
+        height: auto;
+        border-radius: 0 0 20px 20px;
         text-align: center;
         transition: 0.3s;
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.5);
-        padding: 30px 0;
+        padding: 40px 0;
         border: 1px solid rgba(255, 255, 255, 0.1);
         z-index: 999;
     }
@@ -1626,10 +1628,11 @@ footer {
     }
 
     .modal-content {
-        width: 95%;
-        padding: 30px 20px;
-        max-height: 85vh;
+        width: 92%;
+        padding: 40px 15px 20px 15px;
+        max-height: 90vh;
         overflow-y: auto;
+        border-radius: 20px;
     }
 
     .modal h2 {
@@ -1638,7 +1641,16 @@ footer {
     }
 
     .report-option {
-        padding: 12px 20px;
+        padding: 15px 20px;
+        font-size: 0.95rem;
+        gap: 15px;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 1.2rem;
     }
 }
 
