@@ -1166,6 +1166,13 @@ footer {
     padding: 20px;
     opacity: 0;
     transition: opacity 0.4s ease;
+    /* Hide scrollbar */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.modal::-webkit-scrollbar {
+    display: none;
 }
 
 .modal.show {
@@ -1191,6 +1198,13 @@ footer {
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     text-align: center;
     -webkit-overflow-scrolling: touch;
+    /* Hide scrollbar */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.modal-content::-webkit-scrollbar {
+    display: none;
 }
 
 .modal-content::before {
