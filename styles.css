@@ -1638,9 +1638,9 @@ footer {
     }
 
     .modal-content {
-        width: 92%;
+        width: 96%;
         padding: 35px 15px 25px 15px;
-        max-height: 80vh;
+        max-height: 85vh;
         overflow-y: auto;
         border-radius: 20px;
         margin: 0;
