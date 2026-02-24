@@ -1510,13 +1510,12 @@ footer {
 /* Mobile Devices (max-width: 768px) */
 @media screen and (max-width: 768px) {
     header {
-        width: auto;
-        left: 10px;
-        right: 10px;
-        transform: none;
-        top: 10px;
-        padding: 0 15px;
-        max-width: none;
+        display: none !important;
+    }
+
+    .hero-section {
+        padding-top: 60px;
+        /* Reduced since navbar is gone */
     }
 
     nav {
