@@ -174,12 +174,32 @@ window.closeAIModal = function () {
     }, 300);
 }
 
+// Ads Modal Logic
+const adsModal = document.getElementById('adsModal');
+
+window.openAdsModal = function () {
+    adsModal.style.display = 'flex';
+    setTimeout(() => {
+        adsModal.classList.add('show');
+    }, 10);
+}
+
+window.closeAdsModal = function () {
+    adsModal.classList.remove('show');
+    setTimeout(() => {
+        adsModal.style.display = 'none';
+    }, 300);
+}
+
 window.onclick = function (event) {
     if (event.target == reportsModal) {
         closeReportsModal();
     }
     if (event.target == aiModal) {
         closeAIModal();
+    }
+    if (event.target == adsModal) {
+        closeAdsModal();
     }
     if (event.target == imageLightbox) {
         closeImageModal();

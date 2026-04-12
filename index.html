@@ -216,7 +216,7 @@
                         <p>Strategic ad campaigns driving conversions and maximizing ROI.</p>
                         <span class="project-tag">Google Ads</span>
                         <div class="project-buttons">
-                            <a href="#" class="btn-small btn-filled">View Project</a>
+                            <button onclick="openAdsModal()" class="btn-small btn-filled">View Project</button>
                         </div>
                     </div>
                 </div>
@@ -256,6 +256,27 @@
                     </a>
                 </div>
             </div>
+        </div>
+
+        <!-- Ads Modal -->
+        <div id="adsModal" class="modal">
+            <div class="modal-content" style="max-width: 800px;">
+                <span class="close-modal" onclick="closeAdsModal()">&times;</span>
+                <h2>Google Ads Performance</h2>
+                <div class="ads-gallery" style="display: grid; gap: 15px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin-top: 20px;">
+                    <img src="images/google_ads_dashboard.png" alt="Google Ads Dashboard" class="gallery-img" onclick="openImageModal(this.src)" style="width: 100%; border-radius: 8px; cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="images/conversion_funnel.png" alt="Conversion Funnel" class="gallery-img" onclick="openImageModal(this.src)" style="width: 100%; border-radius: 8px; cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="images/demographics_chart.png" alt="Demographics Chart" class="gallery-img" onclick="openImageModal(this.src)" style="width: 100%; border-radius: 8px; cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="images/keyword_analysis.png" alt="Keyword Analysis" class="gallery-img" onclick="openImageModal(this.src)" style="width: 100%; border-radius: 8px; cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="images/roas_graph.png" alt="ROAS Graph" class="gallery-img" onclick="openImageModal(this.src)" style="width: 100%; border-radius: 8px; cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                </div>
+            </div>
+        </div>
+
+        <!-- Image Lightbox -->
+        <div id="imageLightbox" class="modal lightbox-modal">
+            <span class="close-modal close-lightbox" onclick="closeImageModal()" style="position: absolute; top: 20px; right: 30px; font-size: 40px; color: #fff; cursor: pointer;">&times;</span>
+            <img class="lightbox-content" id="lightboxImg" style="display: block; margin: 0 auto; max-width: 90%; max-height: 90vh; border-radius: 8px;">
         </div>
 
         <section id="contact" class="contact-section container">
