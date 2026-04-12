@@ -1,4 +1,4 @@
-const roles = ["Digital Marketer", "Content Strategist", "Agentic AI executive"];
+const roles = ["Digital Marketer", "Content Strategist", "Performance marketer"];
 const typingTextElement = document.querySelector(".typing-text");
 let roleIndex = 0;
 let charIndex = 0;
