@@ -20,19 +20,21 @@
 
         .details-header {
             margin-bottom: 40px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid #e2e8f0;
             padding-bottom: 20px;
         }
 
         .details-title {
             font-size: 2.5rem;
             margin-bottom: 10px;
-            color: #f8fafc;
+            color: var(--primary-color);
+            font-weight: 800;
+            letter-spacing: -0.5px;
         }
 
         .details-subtitle {
             color: var(--accent-color);
-            font-weight: 500;
+            font-weight: 600;
         }
 
         .section-block {
@@ -41,39 +43,46 @@
 
         .section-heading {
             font-size: 1.5rem;
-            color: #f8fafc;
+            color: var(--primary-color);
             margin-bottom: 25px;
             border-left: 4px solid var(--accent-color);
             padding-left: 15px;
+            font-weight: 700;
         }
 
         .text-content {
-            color: var(--text-muted);
+            color: var(--secondary-color);
             line-height: 1.8;
             margin-bottom: 20px;
             font-size: 1.05rem;
         }
 
         .image-box {
-            background: rgba(30, 41, 59, 0.5);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
             border-radius: 12px;
             overflow: hidden;
             height: 350px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: rgba(255, 255, 255, 0.3);
+            color: var(--text-muted);
             font-weight: 600;
             width: 100%;
             margin-bottom: 20px;
+            box-shadow: 0 6px 20px rgba(15, 23, 42, 0.04);
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .image-box:hover {
+            border-color: rgba(99, 102, 241, 0.35);
+            box-shadow: 0 12px 30px rgba(99, 102, 241, 0.1);
         }
 
         .image-box img {
             width: 100%;
             height: 100%;
             object-fit: contain;
-            /* Adjusted to fit full image */
             transition: transform 0.3s ease;
         }
 
@@ -86,11 +95,13 @@
             margin-bottom: 20px;
             color: var(--accent-color);
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
+            transition: color 0.2s ease;
         }
 
         .back-link:hover {
             text-decoration: underline;
+            color: var(--accent-hover);
         }
     </style>
 </head>
